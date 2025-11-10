@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Non-Technical Subjects</title>
+
+  <style>
+    :root {
+      --overlay: linear-gradient(180deg, rgba(0, 32, 64, 0.70), rgba(4, 20, 40, 0.88));
+      --card-bg: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.18);
+      --text-strong: #e6f6ff;
+      --text-soft: #cfe9f7;
+      --accent: #00bcd4;
+      --accent-dark: #0097a7;
+      --glow: rgba(0, 188, 212, 0.35);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 14px;
+      font-family: "Segoe UI", sans-serif;
+      color: var(--text-strong);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background image with overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        var(--overlay),
+        url("1209397.jpg") center/cover no-repeat;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(1000px 550px at 50% 20%, transparent 0%, rgba(0,0,0,0.4) 90%);
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--text-soft);
+      max-width: 600px;
+      margin-bottom: 35px;
+    }
+
+    .quiz-container {
+      width: min(860px, 100%);
+      display: grid;
+      gap: 20px;
+    }
+
+    .quiz-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 20px 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-strong);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.05) inset,
+        0 10px 30px rgba(0,0,0,0.45),
+        0 0 40px var(--glow);
+    }
+
+    .quiz-card span {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .quiz-btn {
+      background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0, 188, 212, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌟 NON-TECHNICAL SUBJECTS 🌟</h1>
+  <p>Select a subject to begin your quiz.</p>
+
+  <div class="quiz-container">
+
+    <a href="tcpage1.html" class="quiz-card">
+      <span>📘 Technical Communication</span>
+      <button class="quiz-btn">Start Quiz</button>
+    </a>
+
+  
+
+    <a href="MAEKETING.html" class="quiz-card">
+      <span>📊 Marketing</span>
+      <button class="quiz-btn">Start Quiz</button>
+    </a>
+
+    <a href="APTITUDE.html" class="quiz-card">
+      <span>📖 Aptitude</span>
+      <button class="quiz-btn">Start Quiz</button>
+    </a>
+
+  </div>
+
+</body>
+</html>

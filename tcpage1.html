@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Communication Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .quiz-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      width: 850px;
+      max-width: 95%;
+      margin: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .question {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f8faff;
+      border-left: 6px solid #6a11cb;
+      transition: transform 0.3s;
+    }
+
+    .question:hover {
+      transform: scale(1.02);
+    }
+
+    .question h3 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    label:hover {
+      background: #e0f7fa;
+      transform: scale(1.01);
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      margin-top: 25px;
+    }
+
+    .submit-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .result {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .correct {
+      background-color: #d4edda !important;
+      border-left: 6px solid #28a745 !important;
+    }
+
+    .wrong {
+      background-color: #f8d7da !important;
+      border-left: 6px solid #dc3545 !important;
+    }
+
+    .correct-answer {
+      color: #28a745;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .selected-wrong {
+      color: #dc3545;
+      font-weight: bold;
+    }
+
+    .selected-correct {
+      color: #28a745;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>📘 Technical Communication Quiz</h1>
+    <form id="quizForm">
+      
+      <!-- 20 QUESTIONS -->
+      <div class="question" id="q1box">
+        <h3>1. What is the main purpose of technical communication?</h3>
+        <label><input type="radio" name="q1" value="a"> To impress readers</label>
+        <label><input type="radio" name="q1" value="b"> To convey information clearly</label>
+        <label><input type="radio" name="q1" value="c"> To use complex words</label>
+        <label><input type="radio" name="q1" value="d"> To tell stories</label>
+      </div>
+
+      <div class="question" id="q2box">
+        <h3>2. Which of these is NOT an example of technical communication?</h3>
+        <label><input type="radio" name="q2" value="a"> User manuals</label>
+        <label><input type="radio" name="q2" value="b"> Research reports</label>
+        <label><input type="radio" name="q2" value="c"> Poetry books</label>
+        <label><input type="radio" name="q2" value="d"> Business letters</label>
+      </div>
+
+      <div class="question" id="q3box">
+        <h3>3. Which feature is essential in technical writing?</h3>
+        <label><input type="radio" name="q3" value="a"> Clarity</label>
+        <label><input type="radio" name="q3" value="b"> Ambiguity</label>
+        <label><input type="radio" name="q3" value="c"> Humor</label>
+        <label><input type="radio" name="q3" value="d"> Complexity</label>
+      </div>
+
+      <div class="question" id="q4box">
+        <h3>4. In technical documents, visuals are used to:</h3>
+        <label><input type="radio" name="q4" value="a"> Replace all text</label>
+        <label><input type="radio" name="q4" value="b"> Simplify information</label>
+        <label><input type="radio" name="q4" value="c"> Confuse readers</label>
+        <label><input type="radio" name="q4" value="d"> Decorate pages</label>
+      </div>
+
+      <div class="question" id="q5box">
+        <h3>5. Which of these is a formal channel of communication?</h3>
+        <label><input type="radio" name="q5" value="a"> Gossip</label>
+        <label><input type="radio" name="q5" value="b"> Email instructions</label>
+        <label><input type="radio" name="q5" value="c"> Rumors</label>
+        <label><input type="radio" name="q5" value="d"> Casual talk</label>
+      </div>
+
+      <div class="question" id="q6box">
+        <h3>6. Which is the correct sequence of communication process?</h3>
+        <label><input type="radio" name="q6" value="a"> Sender → Message → Channel → Receiver → Feedback</label>
+        <label><input type="radio" name="q6" value="b"> Message → Sender → Receiver → Channel</label>
+        <label><input type="radio" name="q6" value="c"> Receiver → Sender → Feedback</label>
+        <label><input type="radio" name="q6" value="d"> Channel → Message → Sender</label>
+      </div>
+
+      <div class="question" id="q7box">
+        <h3>7. Which type of communication uses body language?</h3>
+        <label><input type="radio" name="q7" value="a"> Verbal</label>
+        <label><input type="radio" name="q7" value="b"> Non-verbal</label>
+        <label><input type="radio" name="q7" value="c"> Written</label>
+        <label><input type="radio" name="q7" value="d"> Digital</label>
+      </div>
+
+      <div class="question" id="q8box">
+        <h3>8. Which document is commonly used in workplace communication?</h3>
+        <label><input type="radio" name="q8" value="a"> Memos</label>
+        <label><input type="radio" name="q8" value="b"> Fairy tales</label>
+        <label><input type="radio" name="q8" value="c"> Short stories</label>
+        <label><input type="radio" name="q8" value="d"> Novels</label>
+      </div>
+
+      <div class="question" id="q9box">
+        <h3>9. What is the role of feedback in communication?</h3>
+        <label><input type="radio" name="q9" value="a"> To confuse the sender</label>
+        <label><input type="radio" name="q9" value="b"> To complete the process</label>
+        <label><input type="radio" name="q9" value="c"> To add noise</label>
+        <label><input type="radio" name="q9" value="d"> To start a new message</label>
+      </div>
+
+      <div class="question" id="q10box">
+        <h3>10. Which is NOT a barrier to communication?</h3>
+        <label><input type="radio" name="q10" value="a"> Noise</label>
+        <label><input type="radio" name="q10" value="b"> Language difference</label>
+        <label><input type="radio" name="q10" value="c"> Active listening</label>
+        <label><input type="radio" name="q10" value="d"> Information overload</label>
+      </div>
+
+      <div class="question" id="q11box">
+        <h3>11. Which of these is an example of oral communication?</h3>
+        <label><input type="radio" name="q11" value="a"> Meeting presentation</label>
+        <label><input type="radio" name="q11" value="b"> Email</label>
+        <label><input type="radio" name="q11" value="c"> Notice board</label>
+        <label><input type="radio" name="q11" value="d"> Reports</label>
+      </div>
+
+      <div class="question" id="q12box">
+        <h3>12. Technical communication avoids:</h3>
+        <label><input type="radio" name="q12" value="a"> Clear language</label>
+        <label><input type="radio" name="q12" value="b"> Complex jargon</label>
+        <label><input type="radio" name="q12" value="c"> Simple visuals</label>
+        <label><input type="radio" name="q12" value="d"> Conciseness</label>
+      </div>
+
+      <div class="question" id="q13box">
+        <h3>13. Which report gives information about an event?</h3>
+        <label><input type="radio" name="q13" value="a"> Progress report</label>
+        <label><input type="radio" name="q13" value="b"> Incident report</label>
+        <label><input type="radio" name="q13" value="c"> Annual report</label>
+        <label><input type="radio" name="q13" value="d"> Feasibility report</label>
+      </div>
+
+      <div class="question" id="q14box">
+        <h3>14. The term “Noise” in communication means:</h3>
+        <label><input type="radio" name="q14" value="a"> Pleasant music</label>
+        <label><input type="radio" name="q14" value="b"> Any disturbance</label>
+        <label><input type="radio" name="q14" value="c"> A loudspeaker</label>
+        <label><input type="radio" name="q14" value="d"> Audience clapping</label>
+      </div>
+
+      <div class="question" id="q15box">
+        <h3>15. Which document is often used for job applications?</h3>
+        <label><input type="radio" name="q15" value="a"> Resume</label>
+        <label><input type="radio" name="q15" value="b"> Diary</label>
+        <label><input type="radio" name="q15" value="c"> Storybook</label>
+        <label><input type="radio" name="q15" value="d"> Email chain</label>
+      </div>
+
+      <div class="question" id="q16box">
+        <h3>16. What is “downward communication”?</h3>
+        <label><input type="radio" name="q16" value="a"> From employees to managers</label>
+        <label><input type="radio" name="q16" value="b"> From managers to employees</label>
+        <label><input type="radio" name="q16" value="c"> Between peers</label>
+        <label><input type="radio" name="q16" value="d"> With customers</label>
+      </div>
+
+      <div class="question" id="q17box">
+        <h3>17. Which type of communication flows without hierarchy?</h3>
+        <label><input type="radio" name="q17" value="a"> Formal</label>
+        <label><input type="radio" name="q17" value="b"> Informal</label>
+        <label><input type="radio" name="q17" value="c"> Upward</label>
+        <label><input type="radio" name="q17" value="d"> Downward</label>
+      </div>
+
+      <div class="question" id="q18box">
+        <h3>18. Which skill is MOST important in technical communication?</h3>
+        <label><input type="radio" name="q18" value="a"> Listening</label>
+        <label><input type="radio" name="q18" value="b"> Dancing</label>
+        <label><input type="radio" name="q18" value="c"> Singing</label>
+        <label><input type="radio" name="q18" value="d"> Painting</label>
+      </div>
+
+      <div class="question" id="q19box">
+        <h3>19. Which is a downward communication example?</h3>
+        <label><input type="radio" name="q19" value="a"> A CEO emailing employees</label>
+        <label><input type="radio" name="q19" value="b"> Employee feedback form</label>
+        <label><input type="radio" name="q19" value="c"> Gossip among workers</label>
+        <label><input type="radio" name="q19" value="d"> Friends texting</label>
+      </div>
+
+      <div class="question" id="q20box">
+        <h3>20. Technical communication is primarily:</h3>
+        <label><input type="radio" name="q20" value="a"> Informative</label>
+        <label><input type="radio" name="q20" value="b"> Confusing</label>
+        <label><input type="radio" name="q20" value="c"> Poetic</label>
+        <label><input type="radio" name="q20" value="d"> Fictional</label>
+      </div>
+
+      <!-- SUBMIT -->
+      <button type="button" class="submit-btn" onclick="validateAndCheck()">Submit Quiz</button>
+      <div class="result" id="result"></div>
+    </form>
+  </div>
+
+ <script>
+  function validateAndCheck() {
+    let total = 20;
+    for (let i = 1; i <= total; i++) {
+      let selected = document.querySelector('input[name="q' + i + '"]:checked');
+      if (!selected) {
+        alert("⚠ Please attempt all questions before submitting!");
+        return;
+      }
+    }
+    checkAnswers();
+  }
+
+  function checkAnswers() {
+    let score = 0;
+    let total = 20;
+
+    let answers = {
+      q1:"b", q2:"c", q3:"a", q4:"b", q5:"b",
+      q6:"a", q7:"b", q8:"a", q9:"b", q10:"c",
+      q11:"a", q12:"b", q13:"b", q14:"b", q15:"a",
+      q16:"b", q17:"b", q18:"a", q19:"a", q20:"a"
+    };
+
+    for (let i = 1; i <= total; i++) {
+      let selected = document.querySelector('input[name="q' + i + '"]:checked');
+      let qBox = document.getElementById("q" + i + "box");
+
+      qBox.classList.remove("correct", "wrong");
+      let oldAnswer = qBox.querySelector(".correct-answer");
+      if (oldAnswer) oldAnswer.remove();
+
+      let labels = qBox.querySelectorAll("label");
+      labels.forEach(label => label.classList.remove("selected-correct", "selected-wrong"));
+
+      if (selected.value === answers['q' + i]) {
+        score++;
+        qBox.classList.add("correct");
+        selected.parentElement.classList.add("selected-correct");
+      } else {
+        qBox.classList.add("wrong");
+        selected.parentElement.classList.add("selected-wrong");
+        let ans = document.createElement("p");
+        ans.classList.add("correct-answer");
+        ans.innerText = "✔ Correct Answer: " + answers['q' + i].toUpperCase();
+        qBox.appendChild(ans);
+      }
+    }
+
+    document.getElementById("result").innerHTML =
+      "🎯 You scored " + score + " out of " + total;
+
+    // ✅ SAVE SCORE TO LOCAL STORAGE
+    saveStudentResult(score, total);
+  }
+
+  // ✅ Function to Save Result to Local Storage
+  function saveStudentResult(score, total) {
+    // Get student info saved from login page
+    let studentName = localStorage.getItem("studentName") || "Unknown Student";
+    let regNo = localStorage.getItem("studentRegNo") || "N/A";
+
+    // Prepare data object
+    let attempt = {
+      name: studentName,
+      regNo: regNo,
+      score: score,
+      total: total,
+      date: new Date().toLocaleString()
+    };
+
+    // Get existing results
+    let results = JSON.parse(localStorage.getItem("quizResults")) || [];
+    results.push(attempt);
+
+    // Save updated results
+    localStorage.setItem("quizResults", JSON.stringify(results));
+
+    alert("✅ Quiz submitted successfully! Your score has been recorded.");
+  }
+</script>
+</body>
+</html>

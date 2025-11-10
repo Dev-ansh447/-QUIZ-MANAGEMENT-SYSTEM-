@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARKETING</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .quiz-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      width: 850px;
+      max-width: 95%;
+      margin: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .question {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f8faff;
+      border-left: 6px solid #6a11cb;
+      transition: transform 0.3s;
+    }
+
+    .question:hover {
+      transform: scale(1.02);
+    }
+
+    .question h3 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    label:hover {
+      background: #e0f7fa;
+      transform: scale(1.01);
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      margin-top: 25px;
+    }
+
+    .submit-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .result {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .correct {
+      background-color: #d4edda !important;
+      border-left: 6px solid #28a745 !important;
+    }
+
+    .wrong {
+      background-color: #f8d7da !important;
+      border-left: 6px solid #dc3545 !important;
+    }
+
+    .correct-answer {
+      color: #28a745;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .selected-wrong {
+      color: #dc3545;
+      font-weight: bold;
+    }
+
+    .selected-correct {
+      color: #28a745;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>📖 python</h1>
+    <form id="quizForm">
+      
+   <div class="question" id="q1box">
+  <h3>1. What is the correct file extension for Python files?</h3>
+  <label><input type="radio" name="q1" value="a"> .pyth</label>
+  <label><input type="radio" name="q1" value="b"> .pt</label>
+  <label><input type="radio" name="q1" value="c"> .pyt</label>
+  <label><input type="radio" name="q1" value="d"> .py</label>
+</div>
+
+<div class="question" id="q2box">
+  <h3>2. Which keyword is used to define a function in Python?</h3>
+  <label><input type="radio" name="q2" value="a"> func</label>
+  <label><input type="radio" name="q2" value="b"> def</label>
+  <label><input type="radio" name="q2" value="c"> function</label>
+  <label><input type="radio" name="q2" value="d"> define</label>
+</div>
+
+<div class="question" id="q3box">
+  <h3>3. How do you insert comments in Python code?</h3>
+  <label><input type="radio" name="q3" value="a"> !-- comment --</label>
+  <label><input type="radio" name="q3" value="b"> // comment</label>
+  <label><input type="radio" name="q3" value="c"> # comment</label>
+  <label><input type="radio" name="q3" value="d"> /* comment */</label>
+</div>
+
+<div class="question" id="q4box">
+  <h3>4. Which data type is used to store True or False values?</h3>
+  <label><input type="radio" name="q4" value="a"> int</label>
+  <label><input type="radio" name="q4" value="b"> str</label>
+  <label><input type="radio" name="q4" value="c"> bool</label>
+  <label><input type="radio" name="q4" value="d"> float</label>
+</div>
+
+<div class="question" id="q5box">
+  <h3>5. Which method can be used to convert a string to lowercase?</h3>
+  <label><input type="radio" name="q5" value="a"> lower()</label>
+  <label><input type="radio" name="q5" value="b"> lowercase()</label>
+  <label><input type="radio" name="q5" value="c"> toLowerCase()</label>
+  <label><input type="radio" name="q5" value="d"> downcase()</label>
+</div>
+
+<div class="question" id="q6box">
+  <h3>6. What is the output of print(2 ** 3) in Python?</h3>
+  <label><input type="radio" name="q6" value="a"> 6</label>
+  <label><input type="radio" name="q6" value="b"> 8</label>
+  <label><input type="radio" name="q6" value="c"> 9</label>
+  <label><input type="radio" name="q6" value="d"> 5</label>
+</div>
+
+<div class="question" id="q7box">
+  <h3>7. Which keyword is used for conditional branching in Python?</h3>
+  <label><input type="radio" name="q7" value="a"> switch</label>
+  <label><input type="radio" name="q7" value="b"> case</label>
+  <label><input type="radio" name="q7" value="c"> if</label>
+  <label><input type="radio" name="q7" value="d"> when</label>
+</div>
+
+<div class="question" id="q8box">
+  <h3>8. How do you create a list in Python?</h3>
+  <label><input type="radio" name="q8" value="a"> list = ()</label>
+  <label><input type="radio" name="q8" value="b"> list = []</label>
+  <label><input type="radio" name="q8" value="c"> list = {}</label>
+  <label><input type="radio" name="q8" value="d"> list = <> </label>
+</div>
+
+<div class="question" id="q9box">
+  <h3>9. Which of the following is a Python tuple?</h3>
+  <label><input type="radio" name="q9" value="a"> [1, 2, 3]</label>
+  <label><input type="radio" name="q9" value="b"> {1, 2, 3}</label>
+  <label><input type="radio" name="q9" value="c"> (1, 2, 3)</label>
+  <label><input type="radio" name="q9" value="d"> &lt;1, 2, 3&gt;</label>
+</div>
+
+<div class="question" id="q10box">
+  <h3>10. What is the correct way to write a Python loop that repeats 5 times?</h3>
+  <label><input type="radio" name="q10" value="a"> for i in range(5):</label>
+  <label><input type="radio" name="q10" value="b"> for i to 5:</label>
+  <label><input type="radio" name="q10" value="c"> repeat 5 times</label>
+  <label><input type="radio" name="q10" value="d"> loop(5)</label>
+</div>
+
+<div class="question" id="q11box">
+  <h3>11. What is the output of print(len("Hello"))?</h3>
+  <label><input type="radio" name="q11" value="a"> 4</label>
+  <label><input type="radio" name="q11" value="b"> 5</label>
+  <label><input type="radio" name="q11" value="c"> 6</label>
+  <label><input type="radio" name="q11" value="d"> Error</label>
+</div>
+
+<div class="question" id="q12box">
+  <h3>12. Which operator is used for string concatenation in Python?</h3>
+  <label><input type="radio" name="q12" value="a"> &</label>
+  <label><input type="radio" name="q12" value="b"> +</label>
+  <label><input type="radio" name="q12" value="c"> .</label>
+  <label><input type="radio" name="q12" value="d"> *</label>
+</div>
+
+<div class="question" id="q13box">
+  <h3>13. How do you import the math module in Python?</h3>
+  <label><input type="radio" name="q13" value="a"> import math</label>
+  <label><input type="radio" name="q13" value="b"> include math</label>
+  <label><input type="radio" name="q13" value="c"> using math</label>
+  <label><input type="radio" name="q13" value="d"> require math</label>
+</div>
+
+<div class="question" id="q14box">
+  <h3>14. Which of these is NOT a valid Python variable name?</h3>
+  <label><input type="radio" name="q14" value="a"> my_var</label>
+  <label><input type="radio" name="q14" value="b"> 2var</label>
+  <label><input type="radio" name="q14" value="c"> var2</label>
+  <label><input type="radio" name="q14" value="d"> _var</label>
+</div>
+
+<div class="question" id="q15box">
+  <h3>15. What will be the output of print(type(3.14))?</h3>
+  <label><input type="radio" name="q15" value="a"> class 'int'</label>
+  <label><input type="radio" name="q15" value="b"> class 'float'</label>
+  <label><input type="radio" name="q15" value="c"> class 'str'</label>
+  <label><input type="radio" name="q15" value="d"> class 'bool'</label>
+</div>
+
+<div class="question" id="q16box">
+  <h3>16. How do you create a dictionary in Python?</h3>
+  <label><input type="radio" name="q16" value="a"> dict = []</label>
+  <label><input type="radio" name="q16" value="b"> dict = {}</label>
+  <label><input type="radio" name="q16" value="c"> dict = ()</label>
+  <label><input type="radio" name="q16" value="d"> dict = &lt;&gt;</label>
+</div>
+
+<div class="question" id="q17box">
+  <h3>17. Which statement is used to stop a loop in Python?</h3>
+  <label><input type="radio" name="q17" value="a"> stop</label>
+  <label><input type="radio" name="q17" value="b"> exit</label>
+  <label><input type="radio" name="q17" value="c"> break</label>
+  <label><input type="radio" name="q17" value="d"> quit</label>
+</div>
+
+<div class="question" id="q18box">
+  <h3>18. What does the ‘len()’ function do?</h3>
+  <label><input type="radio" name="q18" value="a"> Returns the length of an object</label>
+  <label><input type="radio" name="q18" value="b"> Converts a value to integer</label>
+  <label><input type="radio" name="q18" value="c"> Prints a message</label>
+  <label><input type="radio" name="q18" value="d"> Defines a function</label>
+</div>
+
+<div class="question" id="q19box">
+  <h3>19. Which of the following is a Python boolean value?</h3>
+  <label><input type="radio" name="q19" value="a"> Yes</label>
+  <label><input type="radio" name="q19" value="b"> True</label>
+  <label><input type="radio" name="q19" value="c"> 1</label>
+  <label><input type="radio" name="q19" value="d"> On</label>
+</div>
+
+<div class="question" id="q20box">
+  <h3>20. Which of the following is the correct syntax to start a Python class?</h3>
+  <label><input type="radio" name="q20" value="a"> class MyClass:</label>
+  <label><input type="radio" name="q20" value="b"> MyClass class:</label>
+  <label><input type="radio" name="q20" value="c"> def class MyClass:</label>
+  <label><input type="radio" name="q20" value="d"> class: MyClass</label>
+</div>
+
+<!-- SUBMIT -->
+<button type="button" class="submit-btn" onclick="validateAndCheck()">Submit Quiz</button>
+<div class="result" id="result"></div>
+
+<script>
+  function validateAndCheck() {
+    let total = 20;
+    for (let i = 1; i <= total; i++) {
+      let selected = document.querySelector('input[name="q' + i + '"]:checked');
+      if (!selected) {
+        alert("⚠ Please attempt all questions before submitting!");
+        return; 
+      }
+    }
+    checkAnswers(); 
+  }
+
+  function checkAnswers() {
+    let score = 0;
+    let total = 20;
+
+    let answers = {
+      q1:"d", q2:"b", q3:"c", q4:"c", q5:"a",
+      q6:"b", q7:"c", q8:"b", q9:"c", q10:"a",
+      q11:"b", q12:"b", q13:"a", q14:"b", q15:"b",
+      q16:"b", q17:"c", q18:"a", q19:"b", q20:"a"
+    };
+
+
+      for (let i = 1; i <= total; i++) {
+        let selected = document.querySelector('input[name="q' + i + '"]:checked');
+        let qBox = document.getElementById("q" + i + "box");
+
+        // Reset previous results
+        qBox.classList.remove("correct", "wrong");
+        let oldAnswer = qBox.querySelector(".correct-answer");
+        if (oldAnswer) oldAnswer.remove();
+
+        let labels = qBox.querySelectorAll("label");
+        labels.forEach(label => label.classList.remove("selected-correct", "selected-wrong"));
+
+        if (selected.value === answers['q' + i]) {
+          score++;
+          qBox.classList.add("correct");
+          selected.parentElement.classList.add("selected-correct");
+        } else {
+          qBox.classList.add("wrong");
+          selected.parentElement.classList.add("selected-wrong");
+          let ans = document.createElement("p");
+          ans.classList.add("correct-answer");
+          ans.innerText = "✔ Correct Answer: " + answers['q' + i].toUpperCase();
+          qBox.appendChild(ans);
+        }
+      }
+
+      document.getElementById("result").innerHTML =
+        "🎯 You scored " + score + " out of " + total;
+    }
+  </script>
+</body>
+</html>

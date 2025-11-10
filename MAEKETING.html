@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARKETING</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .quiz-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      width: 850px;
+      max-width: 95%;
+      margin: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .question {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f8faff;
+      border-left: 6px solid #6a11cb;
+      transition: transform 0.3s;
+    }
+
+    .question:hover {
+      transform: scale(1.02);
+    }
+
+    .question h3 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    label:hover {
+      background: #e0f7fa;
+      transform: scale(1.01);
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      margin-top: 25px;
+    }
+
+    .submit-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .result {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .correct {
+      background-color: #d4edda !important;
+      border-left: 6px solid #28a745 !important;
+    }
+
+    .wrong {
+      background-color: #f8d7da !important;
+      border-left: 6px solid #dc3545 !important;
+    }
+
+    .correct-answer {
+      color: #28a745;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .selected-wrong {
+      color: #dc3545;
+      font-weight: bold;
+    }
+
+    .selected-correct {
+      color: #28a745;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>📖 Marketing</h1>
+    <form id="quizForm">
+      
+    <div class="question" id="q1box">
+      <h3>1. What does the term '4Ps' in marketing stand for?</h3>
+      <label><input type="radio" name="q1" value="a"> Product, Price, Place, Promotion</label>
+      <label><input type="radio" name="q1" value="b"> Product, Profit, Price, Promotion</label>
+      <label><input type="radio" name="q1" value="c"> Product, Place, People, Process</label>
+      <label><input type="radio" name="q1" value="d"> Product, Price, People, Promotion</label>
+    </div>
+
+    <div class="question" id="q2box">
+      <h3>2. Which stage in the product life cycle is characterized by rapid market acceptance and increasing profits?</h3>
+      <label><input type="radio" name="q2" value="a"> Introduction</label>
+      <label><input type="radio" name="q2" value="b"> Growth</label>
+      <label><input type="radio" name="q2" value="c"> Maturity</label>
+      <label><input type="radio" name="q2" value="d"> Decline</label>
+    </div>
+
+    <div class="question" id="q3box">
+      <h3>3. What does 'market segmentation' mean?</h3>
+      <label><input type="radio" name="q3" value="a"> Dividing a market into distinct groups of buyers</label>
+      <label><input type="radio" name="q3" value="b"> Combining different markets into one</label>
+      <label><input type="radio" name="q3" value="c"> Selling products in multiple countries</label>
+      <label><input type="radio" name="q3" value="d"> Offering discounts to all customers</label>
+    </div>
+
+    <div class="question" id="q4box">
+      <h3>4. Which of the following is NOT a part of the marketing mix?</h3>
+      <label><input type="radio" name="q4" value="a"> Price</label>
+      <label><input type="radio" name="q4" value="b"> Place</label>
+      <label><input type="radio" name="q4" value="c"> People</label>
+      <label><input type="radio" name="q4" value="d"> Production</label>
+    </div>
+
+    <div class="question" id="q5box">
+      <h3>5. What is 'brand equity'?</h3>
+      <label><input type="radio" name="q5" value="a"> The value premium a company earns from a product with a recognizable name</label>
+      <label><input type="radio" name="q5" value="b"> The total sales of a brand</label>
+      <label><input type="radio" name="q5" value="c"> The number of products a brand has</label>
+      <label><input type="radio" name="q5" value="d"> The advertising budget of a brand</label>
+    </div>
+
+    <div class="question" id="q6box">
+      <h3>6. Which is an example of a 'push' marketing strategy?</h3>
+      <label><input type="radio" name="q6" value="a"> Advertising to end consumers</label>
+      <label><input type="radio" name="q6" value="b"> Trade shows to encourage retailers to stock products</label>
+      <label><input type="radio" name="q6" value="c"> Social media campaigns</label>
+      <label><input type="radio" name="q6" value="d"> Viral marketing</label>
+    </div>
+
+    <div class="question" id="q7box">
+      <h3>7. What is the primary goal of 'content marketing'?</h3>
+      <label><input type="radio" name="q7" value="a"> To sell products directly</label>
+      <label><input type="radio" name="q7" value="b"> To provide valuable information to attract and retain customers</label>
+      <label><input type="radio" name="q7" value="c"> To reduce advertising costs</label>
+      <label><input type="radio" name="q7" value="d"> To increase product price</label>
+    </div>
+
+    <div class="question" id="q8box">
+      <h3>8. What is 'CRM' in marketing?</h3>
+      <label><input type="radio" name="q8" value="a"> Customer Relationship Management</label>
+      <label><input type="radio" name="q8" value="b"> Cost Reduction Method</label>
+      <label><input type="radio" name="q8" value="c"> Consumer Rating Mechanism</label>
+      <label><input type="radio" name="q8" value="d"> Corporate Revenue Model</label>
+    </div>
+
+    <div class="question" id="q9box">
+      <h3>9. What is a 'USP' in marketing?</h3>
+      <label><input type="radio" name="q9" value="a"> Unique Sales Plan</label>
+      <label><input type="radio" name="q9" value="b"> Unique Selling Proposition</label>
+      <label><input type="radio" name="q9" value="c"> Unified Sales Process</label>
+      <label><input type="radio" name="q9" value="d"> Uniform Sales Price</label>
+    </div>
+
+    <div class="question" id="q10box">
+      <h3>10. What type of pricing involves setting prices based on competitors' prices?</h3>
+      <label><input type="radio" name="q10" value="a"> Cost-plus pricing</label>
+      <label><input type="radio" name="q10" value="b"> Penetration pricing</label>
+      <label><input type="radio" name="q10" value="c"> Competitive pricing</label>
+      <label><input type="radio" name="q10" value="d"> Skimming pricing</label>
+    </div>
+
+    <div class="question" id="q11box">
+      <h3>11. What does 'B2B' stand for?</h3>
+      <label><input type="radio" name="q11" value="a"> Business to Business</label>
+      <label><input type="radio" name="q11" value="b"> Business to Buyer</label>
+      <label><input type="radio" name="q11" value="c"> Brand to Brand</label>
+      <label><input type="radio" name="q11" value="d"> Buyer to Buyer</label>
+    </div>
+
+    <div class="question" id="q12box">
+      <h3>12. What is 'market penetration'?</h3>
+      <label><input type="radio" name="q12" value="a"> Launching new products</label>
+      <label><input type="radio" name="q12" value="b"> Increasing market share for existing products</label>
+      <label><input type="radio" name="q12" value="c"> Entering new markets</label>
+      <label><input type="radio" name="q12" value="d"> Reducing prices</label>
+    </div>
+
+    <div class="question" id="q13box">
+      <h3>13. What is the purpose of 'SWOT analysis'?</h3>
+      <label><input type="radio" name="q13" value="a"> To analyze competitors</label>
+      <label><input type="radio" name="q13" value="b"> To assess strengths, weaknesses, opportunities, and threats</label>
+      <label><input type="radio" name="q13" value="c"> To evaluate financial performance</label>
+      <label><input type="radio" name="q13" value="d"> To create advertising slogans</label>
+    </div>
+
+    <div class="question" id="q14box">
+      <h3>14. What is 'guerrilla marketing'?</h3>
+      <label><input type="radio" name="q14" value="a"> High-budget advertising</label>
+      <label><input type="radio" name="q14" value="b"> Innovative, low-cost marketing tactics</label>
+      <label><input type="radio" name="q14" value="c"> Marketing through TV commercials</label>
+      <label><input type="radio" name="q14" value="d"> Direct mail marketing</label>
+    </div>
+
+    <div class="question" id="q15box">
+      <h3>15. Which marketing channel involves direct interaction with the consumer?</h3>
+      <label><input type="radio" name="q15" value="a"> Direct marketing</label>
+      <label><input type="radio" name="q15" value="b"> Mass marketing</label>
+      <label><input type="radio" name="q15" value="c"> Digital marketing</label>
+      <label><input type="radio" name="q15" value="d"> Influencer marketing</label>
+    </div>
+
+    <div class="question" id="q16box">
+      <h3>16. What is 'customer retention'?</h3>
+      <label><input type="radio" name="q16" value="a"> Acquiring new customers</label>
+      <label><input type="radio" name="q16" value="b"> Keeping existing customers over time</label>
+      <label><input type="radio" name="q16" value="c"> Increasing product prices</label>
+      <label><input type="radio" name="q16" value="d"> Launching new products</label>
+    </div>
+
+    <div class="question" id="q17box">
+      <h3>17. What does 'SEO' stand for?</h3>
+      <label><input type="radio" name="q17" value="a"> Search Engine Optimization</label>
+      <label><input type="radio" name="q17" value="b"> Social Engagement Outreach</label>
+      <label><input type="radio" name="q17" value="c"> Sales and Earnings Overview</label>
+      <label><input type="radio" name="q17" value="d"> Service Efficiency Operation</label>
+    </div>
+
+    <div class="question" id="q18box">
+      <h3>18. What is the meaning of 'brand loyalty'?</h3>
+      <label><input type="radio" name="q18" value="a"> Customers repeatedly buy the same brand</label>
+      <label><input type="radio" name="q18" value="b"> Offering discounts to customers</label>
+      <label><input type="radio" name="q18" value="c"> Using many advertising channels</label>
+      <label><input type="radio" name="q18" value="d"> Changing brand logos frequently</label>
+    </div>
+
+    <div class="question" id="q19box">
+      <h3>19. What is a 'lead' in marketing?</h3>
+      <label><input type="radio" name="q19" value="a"> A potential customer interested in your product</label>
+      <label><input type="radio" name="q19" value="b"> A marketing manager</label>
+      <label><input type="radio" name="q19" value="c"> A competitor brand</label>
+      <label><input type="radio" name="q19" value="d"> An advertising campaign</label>
+    </div>
+
+    <div class="question" id="q20box">
+      <h3>20. What is the goal of 'market research'?</h3>
+      <label><input type="radio" name="q20" value="a"> To reduce product prices</label>
+      <label><input type="radio" name="q20" value="b"> To understand customer needs and market trends</label>
+      <label><input type="radio" name="q20" value="c"> To increase advertising budget</label>
+      <label><input type="radio" name="q20" value="d"> To create new products</label>
+    </div>
+
+    <button type="button" class="submit-btn" onclick="validateAndCheck()">Submit Quiz</button>
+    <div class="result" id="result"></div>
+  </form>
+</div>
+
+<script>
+  function validateAndCheck() {
+    let total = 20;
+    for (let i = 1; i <= total; i++) {
+      let selected = document.querySelector('input[name="q' + i + '"]:checked');
+      if (!selected) {
+        alert("⚠ Please attempt all questions before submitting!");
+        return;
+      }
+    }
+    checkAnswers();
+  }
+
+  function checkAnswers() {
+    let score = 0;
+    let total = 20;
+
+    const answers = {
+      q1: "a", 
+      q2: "b", 
+      q3: "a",  
+      q4: "d",  
+      q5: "a", 
+      q6: "b",  
+      q7: "b", 
+      q8: "a",  
+      q9: "b",  
+      q10: "c", 
+      q11: "a", 
+      q12: "b", 
+      q13: "b", 
+      q14: "b",
+      q15: "a", 
+      q16: "b", 
+      q17: "a", 
+      q18: "a",
+      q19: "a", 
+      q20: "b", 
+    };
+
+  
+
+
+      for (let i = 1; i <= total; i++) {
+        let selected = document.querySelector('input[name="q' + i + '"]:checked');
+        let qBox = document.getElementById("q" + i + "box");
+
+        // Reset previous results
+        qBox.classList.remove("correct", "wrong");
+        let oldAnswer = qBox.querySelector(".correct-answer");
+        if (oldAnswer) oldAnswer.remove();
+
+        let labels = qBox.querySelectorAll("label");
+        labels.forEach(label => label.classList.remove("selected-correct", "selected-wrong"));
+
+        if (selected.value === answers['q' + i]) {
+          score++;
+          qBox.classList.add("correct");
+          selected.parentElement.classList.add("selected-correct");
+        } else {
+          qBox.classList.add("wrong");
+          selected.parentElement.classList.add("selected-wrong");
+          let ans = document.createElement("p");
+          ans.classList.add("correct-answer");
+          ans.innerText = "✔ Correct Answer: " + answers['q' + i].toUpperCase();
+          qBox.appendChild(ans);
+        }
+      }
+
+      document.getElementById("result").innerHTML =
+        "🎯 You scored " + score + " out of " + total;
+    }
+  </script>
+</body>
+</html>
